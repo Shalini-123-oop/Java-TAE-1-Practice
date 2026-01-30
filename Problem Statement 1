@@ -1,0 +1,37 @@
+package inheritance;
+
+	// Base class
+	class Device {
+	    void powerOn() {
+	        System.out.println("Device is powered on");
+	    }
+	}
+
+	// Intermediate class
+	class Computer extends Device {
+	    void boot() {
+	        System.out.println("Computer is booting");
+	    }
+	}
+
+	// Child class
+	class Laptop extends Computer {
+	    void portability() {
+	        System.out.println("Laptop is portable");
+	    }
+	}
+
+	// Main class (ONLY ONE public class)
+	public class MultilevelInheritance {
+
+	    public static void main(String[] args) {
+
+	        Laptop myLaptop = new Laptop();
+
+	        myLaptop.powerOn();      // From Device
+	        myLaptop.boot();         // From Computer
+	        myLaptop.portability(); // From Laptop
+	    }
+	}
+
+
